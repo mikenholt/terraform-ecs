@@ -1,9 +1,9 @@
 provider "aws" {
-  region = "eu-west-1"
+  region = "us-east-2"
 }
 
 module "ecs" {
-  source = "modules/ecs"
+  source = "./modules/ecs"
 
   environment          = "${var.environment}"
   cluster              = "${var.environment}"
