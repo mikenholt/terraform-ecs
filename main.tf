@@ -22,5 +22,5 @@ module "ecs" {
 
 resource "aws_key_pair" "ecs" {
   key_name   = "ecs-key-${var.environment}"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtMljjj0Ccxux5Mssqraa/iHHxheW+m0Rh17fbd8t365y9EwBn00DN/0PjdU2CK6bjxwy8BNGXWoUXiSDDtGqRupH6e9J012yE5kxhpXnnkIcLGjkAiflDBVV4sXS4b3a2LSXL5Dyb93N2GdnJ03FJM4qDJ8lfDQxb38eYHytZkmxW14xLoyW5Hbyr3SXhdHC2/ecdp5nLNRwRWiW6g9OA6jTQ3LgeOZoM6dK4ltJUQOakKjiHsE+jvmO0hJYQN7+5gYOw0HHsM+zmATvSipAWzoWBWcmBxAbcdW0R0KvCwjylCyRVbRMRbSZ/c4idZbFLZXRb7ZJkqNJuy99+ld41 ecs@aws.fake"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZXjJ1+l1GmiPQ4SicpLa6kBuMZB7EgNnrTPNsaGVklfod17zY/K9Z8qXYlcxhSQ9lSCxcqozFGokjjZLWH1V9Wi2mGeD0XrSVLvHz2kVl9vrKIgOqnAEhOu6LO+gC64E+vjcvITW+4nJzElkBLfuWd4dnEUG6MDHdkPBZ/81lj+R5Tz7II4UAAeG/bkoD8g3dLtaI+mXO0Y8UxYe644cO9GREelVH4D5rcQdkW5zK3qq1Wcpr3tQfHOFhcGkpE/P5UqbbV8CcsWddonyI1tOdjc1yZ/5wbZAVgratq8BPbVklO9pjskCMYVjAOSpPo6QOvmDou2cWke5r4Qi8lVnH mike@ip-x-x-x-x"
 }

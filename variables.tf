@@ -3,7 +3,7 @@ variable "vpc_cidr" {
 }
 
 variable "environment" {
-  default = "acc"
+  default = "ecs-test"
 }
 
 variable "public_subnet_cidrs" {
