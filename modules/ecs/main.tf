@@ -14,7 +14,7 @@ module "ecs_instances" {
   environment             = var.environment
   cluster                 = var.cluster
   instance_group          = var.instance_group
-  private_subnet_ids      = module.network.private_subnet_ids
+  private_subnet_ids      = flatten([module.network.private_subnet_ids])
   aws_ami                 = var.ecs_aws_ami
   instance_type           = var.instance_type
   max_size                = var.max_size
