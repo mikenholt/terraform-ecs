@@ -50,12 +50,12 @@ variable "iam_instance_profile_id" {
 }
 
 variable "private_subnet_ids" {
-  type        = "list"
+  type        = list(string)
   description = "The list of private subnets to place the instances in"
 }
 
 variable "load_balancers" {
-  type        = "list"
+  type        = list(string)
   default     = []
   description = "The load balancers to couple to the instances. Only used when NOT using ALB"
 }
@@ -82,3 +82,4 @@ variable "ecs_logging" {
   default     = "[\"json-file\",\"awslogs\"]"
   description = "Adding logging option to ECS that the Docker containers can use. It is possible to add fluentd as well"
 }
+

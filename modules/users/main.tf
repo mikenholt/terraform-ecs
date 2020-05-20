@@ -9,7 +9,7 @@ resource "aws_iam_user" "ecs_deployer" {
 # to have any roles in there with full admin rights, but no ECS task should have these rights!
 resource "aws_iam_user_policy" "ecs_deployer_policy" {
   name = "ecs_deployer_policy"
-  user = "${aws_iam_user.ecs_deployer.name}"
+  user = aws_iam_user.ecs_deployer.name
 
   policy = <<EOF
 {
@@ -36,8 +36,10 @@ resource "aws_iam_user_policy" "ecs_deployer_policy" {
     ]
 }
 EOF
+
 }
 
 resource "aws_iam_access_key" "ecs_deployer" {
-  user = "${aws_iam_user.ecs_deployer.name}"
+  user = aws_iam_user.ecs_deployer.name
 }
+

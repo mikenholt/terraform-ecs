@@ -8,7 +8,7 @@ variable "environment" {
 }
 
 variable "public_subnet_ids" {
-  type        = "list"
+  type        = list(string)
   description = "List of public subnet ids to place the loadbalancer in"
 }
 
@@ -30,3 +30,4 @@ variable "allow_cidr_block" {
   default     = "0.0.0.0/0"
   description = "Specify cird block that is allowd to acces the LoadBalancer"
 }
+

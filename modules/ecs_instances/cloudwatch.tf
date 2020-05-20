@@ -32,3 +32,4 @@ resource "aws_cloudwatch_log_group" "messages" {
   name              = "${var.cloudwatch_prefix}/var/log/messages"
   retention_in_days = 30
 }
+

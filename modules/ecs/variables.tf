@@ -17,23 +17,23 @@ variable "vpc_cidr" {
 }
 
 variable "private_subnet_cidrs" {
-  type        = "list"
+  type        = list(string)
   description = "List of private cidrs, for every avalibility zone you want you need one. Example: 10.0.0.0/24 and 10.0.1.0/24"
 }
 
 variable "public_subnet_cidrs" {
-  type        = "list"
+  type        = list(string)
   description = "List of public cidrs, for every avalibility zone you want you need one. Example: 10.0.0.0/24 and 10.0.1.0/24"
 }
 
 variable "load_balancers" {
-  type        = "list"
+  type        = list(string)
   default     = []
   description = "The load balancers to couple to the instances"
 }
 
 variable "availability_zones" {
-  type        = "list"
+  type        = list(string)
   description = "List of avalibility zones you want. Example: eu-west-1a and eu-west-1b"
 }
 
@@ -80,3 +80,4 @@ variable "cloudwatch_prefix" {
   default     = ""
   description = "If you want to avoid cloudwatch collision or you don't want to merge all logs to one log group specify a prefix"
 }
+
